@@ -1,0 +1,17 @@
+Dec 24 18:02:38.062 ERRO missing field `authors` for key `package`
+Dec 24 18:04:20.970 ERRO crate-type must be cdylib to compile to wasm32-unknown-unknown. Add the following to your Cargo.toml file:
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+Dec 24 18:19:20.379 ERRO crate-type must be cdylib to compile to wasm32-unknown-unknown. Add the following to your Cargo.toml file:
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+Dec 24 23:05:34.221 ERRO crate-type must be cdylib to compile to wasm32-unknown-unknown. Add the following to your Cargo.toml file:
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+Dec 24 23:31:48.437 ERRO crate-type must be cdylib to compile to wasm32-unknown-unknown. Add the following to your Cargo.toml file:
+
+[lib]
+crate-type = ["cdylib", "rlib"]

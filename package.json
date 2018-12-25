@@ -1,0 +1,40 @@
+{
+  "name": "react-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-wasm": "cargo build --target wasm32-unknown-unknown",
+    "build-bindgen": "wasm-bindgen ./target/wasm32-unknown-unknown/debug/react_weather.wasm --out-dir build",
+    "build": "npm run build-wasm && npm run build-bindgen && npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sateeshs/react-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sateeshs/react-weather/issues"
+  },
+  "homepage": "https://github.com/sateeshs/react-weather#readme",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.0"
+  }
+}

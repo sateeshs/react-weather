@@ -8,7 +8,7 @@
     "build-wasm": "cargo build --target wasm32-unknown-unknown",
     "build-bindgen": "wasm-bindgen ./target/wasm32-unknown-unknown/debug/react_weather.wasm --out-dir build",
     "build": "npm run build-wasm && npm run build-bindgen && npx webpack",
-    "start":"webpack-dev-server --progress"
+    "start": "npm run build && webpack-dev-server --progress"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
+    "text-encoding": "^0.7.0",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.0"

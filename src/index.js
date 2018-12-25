@@ -1,18 +1,20 @@
 import React from 'react';
-import reactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+import App from './reapp/App';
+//import { wasmMemory } from "../build/react_weather_bg";
+//console.log(wasmMemory);
 
-const wasm = import("../build/react_weather");
+/*
+(async () => {
+  const fetchPromise = fetch('react_weather_bg.wasm');
+  const module = await WebAssembly.compileStreaming(fetchPromise);
+  const instance = await WebAssembly.instantiate(module);
+  //const result = instance.exports.fibonacci(42);
+  console.log(instance);
+})();
 
-wasm.then(wasm => {
-  const App = () => {
-    return (
-      <div>
-        <h1>Hi there</h1>
-        <button onClick={wasm.alert("Hi")}>Run Computation</button>
-      </div>
-    );
-  };
+
+*/
 
   
-ReactDOM.render(<h1>Hi there</h1>, document.getElementById("root"));
-});
+ReactDOM.render(<App/>, document.getElementById("root"));

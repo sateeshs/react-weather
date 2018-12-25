@@ -8,7 +8,10 @@ use web_sys::{Request, RequestInit, RequestMode, Response};
 use serde::{Deserialize, Serialize};
 
 #[wasm_bindgen]
-pub extern fn alert(s: &str){}
+pub extern fn alert(name: &str){
+        alert(&format!("Hello, {}!", name));
+
+}
 
 #[wasm_bindgen]
 pub fn big_computation() {
@@ -50,7 +53,7 @@ pub struct Signature {
     pub email: String,
 }
 
-
+#[wasm_bindgen]
 pub extern fn run() -> Promise {
     let mut opts = RequestInit::new();
     opts.method("GET");

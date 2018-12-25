@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-wasm": "cargo build --target wasm32-unknown-unknown",
     "build-bindgen": "wasm-bindgen ./target/wasm32-unknown-unknown/debug/react_weather.wasm --out-dir build",
-    "build": "npm run build-wasm && npm run build-bindgen && npx webpack"
+    "build": "npm run build-wasm && npm run build-bindgen && npx webpack",
+    "start":"webpack-dev-server --progress"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,15 @@
     "react-dom": "^16.7.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "~6.18.0",
+    "babel-plugin-system-import-transformer": "^3.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.28.2",

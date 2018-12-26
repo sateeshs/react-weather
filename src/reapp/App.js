@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const wasm = import("../../build/react_weather_bg");
 
-class App extends Component {
+export class App extends Component {
     
         
 render() {

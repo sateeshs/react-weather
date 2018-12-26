@@ -16,5 +16,10 @@ import App from './reapp/App';
 
 */
 
+let HelloWorld = () => {
+  return <h1>Hello there World!</h1>
+}
+
+
   
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<HelloWorld/>, document.getElementById("root"));
